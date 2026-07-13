@@ -83,6 +83,7 @@ Feel free to explore the solutions.
 
 ## 📬 Connect
 
-GitHub: https://github.com/AfsarAI
-LeetCode: https://leetcode.com/u/afsar_ai_/
+- GitHub: https://github.com/AfsarAI
+- LeetCode: https://leetcode.com/u/afsar_ai_/
+  
 Happy Coding! 🚀
