@@ -6,6 +6,8 @@ class Solution {
             return n;
         }
 
-        return Integer.highestOneBit(n) << 1;
+        int x = (int) (Math.log(n) / Math.log(2));
+
+        return 1 << (x + 1);
     }
 }
