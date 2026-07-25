@@ -3,7 +3,6 @@ class Solution {
         int max = -1;
         int secMax = max;
         int num = n;
-
         while(num > 0){
             int digit = num % 10;
             if (digit >= max){
