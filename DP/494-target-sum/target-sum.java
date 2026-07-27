@@ -13,11 +13,11 @@ class Solution {
             return target == 0 ? 1 : 0;
         }
 
-        if (dp[i][target+1000*20] != -1) return dp[i][target+1000*20];
+        // if (dp[i][target+1000*20] != -1) return dp[i][target+1000*20];
 
         int plus = sum(arr, target-arr[i], i+1, dp);
         int minus = sum(arr, target+arr[i], i+1, dp);
 
-        return dp[i][target+1000*20] = plus+minus;
+        return plus+minus;
     }
 }
