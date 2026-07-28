@@ -1,14 +1,14 @@
 class Solution {
     public String smallestPalindrome(String s) {
         int size = s.length();
-        int index = size / 2;
+        int midIndex = size / 2;
         String mid = "";
         if (size % 2 != 0)
-            mid = String.valueOf(s.charAt(index));
+            mid = String.valueOf(s.charAt(midIndex));
 
         int[] charCount = new int[26];
 
-        for (int i = 0; i < index; i++){
+        for (int i = 0; i < midIndex; i++){
             char c = s.charAt(i);
             charCount[c - 'a']++;
         }
@@ -24,9 +24,7 @@ class Solution {
         StringBuilder secondHalf = new StringBuilder(firstHalf).reverse();
 
         StringBuilder ans = new StringBuilder();
-        ans.append(firstHalf)
-        .append(mid)
-        .append(secondHalf);
+        ans.append(firstHalf).append(mid).append(secondHalf);
 
         return ans.toString();
     }
