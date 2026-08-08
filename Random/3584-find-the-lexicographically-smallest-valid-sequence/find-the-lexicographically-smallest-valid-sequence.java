@@ -7,8 +7,7 @@ class Solution {
         Arrays.fill(last, -1);
         for (int i = n - 1, j = m - 1; i >= 0; i--) {
             if (j >= 0 && word1.charAt(i) == word2.charAt(j)) {
-                last[j] = i;
-                j--;
+                last[j--] = i;
             }
         }
 
