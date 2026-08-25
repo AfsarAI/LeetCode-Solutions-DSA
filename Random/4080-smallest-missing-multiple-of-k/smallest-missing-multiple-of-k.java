@@ -1,10 +1,13 @@
 class Solution {
     public int missingMultiple(int[] nums, int k) {
-        Arrays.sort(nums);
-        int i = 1;
-        while(Arrays.binarySearch(nums, k*i) >= 0){
-            i++;
+        Set<Integer> numSet = new HashSet<>();
+        for (int num : nums) {
+            numSet.add(num);
         }
-        return k*i;
+        int m = k;
+        while (numSet.contains(m)) {
+            m += k;
+        }
+        return m;
     }
 }
