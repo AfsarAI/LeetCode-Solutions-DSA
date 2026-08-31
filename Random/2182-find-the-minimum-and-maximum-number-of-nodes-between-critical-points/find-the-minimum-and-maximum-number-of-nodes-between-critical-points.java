@@ -46,7 +46,7 @@ class Solution {
         }
 
         if (cnt < 2) {
-            return new int[] { -1, -1 };
+            return new int[] {-1, -1};
         }
         return ans;
     }
