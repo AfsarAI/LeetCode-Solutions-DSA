@@ -16,11 +16,10 @@
 class Solution {
     class Pair {
         int sum;
-        int cnt;
-
-        Pair(int sum, int cnt) {
+        int count;
+        Pair(int sum, int count) {
             this.sum = sum;
-            this.cnt = cnt;
+            this.count = count;
         }
     }
     int ans = 0;
@@ -29,12 +28,12 @@ class Solution {
         Pair left = solve(node.left);
         Pair right = solve(node.right);
         int sum = node.val + left.sum + right.sum;
-        int count = 1 + left.cnt + right.cnt;
+        int count = 1 + left.count + right.count;
         if (node.val == sum / count) ans++;
         return new Pair(sum, count);
     }
     public int averageOfSubtree(TreeNode root) {
-        Pair p = solve(root);
+        solve(root);
         return ans;
     }
 }
