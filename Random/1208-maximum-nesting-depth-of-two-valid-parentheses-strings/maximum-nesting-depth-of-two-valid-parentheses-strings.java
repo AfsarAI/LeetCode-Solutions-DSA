@@ -3,7 +3,6 @@ class Solution {
         int n = seq.length();
         int[] answer = new int[n];
         int depth = 0;
-        
         for (int i = 0; i < n; i++) {
             if (seq.charAt(i) == '(') {
                 depth++;
@@ -13,7 +12,6 @@ class Solution {
                 depth--;
             }
         }
-        
         return answer;
     }
 }
