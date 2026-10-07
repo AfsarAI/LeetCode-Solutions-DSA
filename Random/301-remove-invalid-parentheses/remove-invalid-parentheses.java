@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 class Solution {
     public List<String> removeInvalidParentheses(String s) {
         List<String> res = new ArrayList<>();
